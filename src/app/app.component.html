@@ -1,0 +1,31 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+    </h1>
+    <hr>
+    <h1>Interval</h1>
+
+    <div>
+        <label for="round">Round</label>
+        <input [(ngModel)]="hiit.rounds" name="round" id="round">
+    </div>
+    <div>
+        <label for="work">Work</label>
+        <input [(ngModel)]="hiit.work" name="work" id="work">
+    </div>
+    <div>
+        <label for="rest">Rest</label>
+        <input [(ngModel)]="hiit.rest" name="rest" id="rest">
+    </div>
+
+    <!--<input [(ngModel)]="capTime" name="capTime" id="cap-time">-->
+
+    <button class="button-mini-2--dark" (click)="onHiitCountDown()">C'est parti !</button>
+
+    <h1>{{workTime}}</h1>
+    <span>{{hiit.roundsLeftSubject | async}} => rounds left</span>
+    <h2>{{restTime}}</h2>
+
+</div>
+
