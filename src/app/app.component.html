@@ -4,7 +4,7 @@
         Welcome to {{ title }}!
     </h1>
     <hr>
-    <h1>Interval</h1>
+    <h1>Hiit: High Intensity Interval Training</h1>
 
     <div>
         <label for="round">Round</label>
@@ -26,6 +26,17 @@
     <h1>{{workTime}}</h1>
     <span>{{hiit.roundsLeftSubject | async}} => rounds left</span>
     <h2>{{restTime}}</h2>
+
+    <hr>
+
+    <h1>Classic countdown</h1>
+    <div>
+        <label for="cap-time">Set time in second (for now)</label>
+        <input [(ngModel)]="capTime" name="capTime" id="cap-time">
+    </div>
+    <button class="button-mini-2--dark" (click)="onCountDown()">Aller !</button>
+    <button class="button-mini-2--dark" (click)="onStopCountDown()">Stop</button>
+    <h1>{{countdown}}</h1>
 
 </div>
 
