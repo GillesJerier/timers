@@ -1,0 +1,17 @@
+<mat-dialog-actions>
+    <span mat-dialog-close="" aria-label="close button">
+        <mat-icon aria-hidden="false" aria-label="close icon">close</mat-icon>
+    </span>
+</mat-dialog-actions>
+<audio preload="auto" #regularBeep>
+    <source src="assets/sounds/beep1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<mat-dialog-content>
+    <section fxLayout="column" fxLayoutAlign="center center" class="workout-section" (click)="onPauseResumeTimer()">
+        <p class="countdown-timer">
+            {{countdown.minutes | timer}} : {{countdown.seconds | timer}}
+        </p>
+    </section>
+</mat-dialog-content>

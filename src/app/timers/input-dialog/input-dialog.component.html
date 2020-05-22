@@ -1,0 +1,47 @@
+<section>
+    <mat-dialog-content>
+        <div class="input-value">
+            <span class="selected-number">{{selectedNumber}}</span>
+            <span class="selected-type">{{type | uppercase}}</span>
+            <span *ngIf="selectedNumber" class="remove-char" (click)="onRemoveLastNumber()">
+                <mat-icon aria-hidden="false" aria-label="delete icon">backspace</mat-icon>
+            </span>
+        </div>
+        <div class="numbers">
+            <div class="first-three" fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem">
+                <div class="number one" (click)="onAddNumber(1)">1</div>
+                <div class="number two" (click)="onAddNumber(2)">2</div>
+                <div class="number three" (click)="onAddNumber(3)">3</div>
+            </div>
+            <div class="second-three" fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem">
+                <div class="number four" (click)="onAddNumber(4)">4</div>
+                <div class="number five" (click)="onAddNumber(5)">5</div>
+                <div class="number six" (click)="onAddNumber(6)">6</div>
+            </div>
+            <div class="third-three" fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem">
+                <div class="number seven" (click)="onAddNumber(7)">7</div>
+                <div class="number eight" (click)="onAddNumber(8)">8</div>
+                <div class="number nine" (click)="onAddNumber(9)">9</div>
+            </div>
+            <div class="zero" fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem">
+                <div>&nbsp;</div>
+                <div class="number zero" (click)="onAddNumber(0)">0</div>
+                <div>&nbsp;</div>
+            </div>
+
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+        <button mat-button [mat-dialog-close]="selectedNumber">Ok</button>
+    </mat-dialog-actions>
+</section>

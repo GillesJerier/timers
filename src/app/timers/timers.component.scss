@@ -1,0 +1,38 @@
+section {
+  mat-card {
+    margin: 0 auto;
+  }
+}
+
+.timers {
+  h2 {
+    text-align: center;
+  }
+
+  .workout-section {
+    height: 100%;
+  }
+
+}
+
+.rest {
+  background-color: lightgreen;
+}
+
+mat-card {
+  width: 80%;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+
+  .form {
+    width: 100%;
+
+    mat-form-field {
+      width: 100%;
+
+      mat-select {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

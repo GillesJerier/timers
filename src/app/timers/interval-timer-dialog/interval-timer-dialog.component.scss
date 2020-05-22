@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  height: 100%;
+
+  .workout-section {
+
+
+    h2 {
+      text-align: center;
+    }
+
+    .countdown {
+      min-height: 20rem;
+
+      strong {
+        display: block;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+
+        &.title {
+          font-weight: bolder;
+        }
+      }
+
+      .timer {
+        font-family: digital, Roboto, "Helvetica Neue", sans-serif;
+        font-size: 6rem;
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+}

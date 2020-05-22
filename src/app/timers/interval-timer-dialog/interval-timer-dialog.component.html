@@ -1,0 +1,34 @@
+<mat-dialog-actions>
+    <span mat-dialog-close="" aria-label="close button">
+        <mat-icon aria-hidden="false" aria-label="close icon">close</mat-icon>
+    </span>
+</mat-dialog-actions>
+<audio preload="auto" #regularBeep>
+    <source src="assets/sounds/beep2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio preload="auto" #roundBeep>
+    <source src="assets/sounds/beep1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio preload="auto" #doubleBeep>
+    <source src="assets/sounds/beep4.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<section class="workout-section" (click)="onPauseIntervalTimer()">
+    <h2>ROUND: {{currentRound}}</h2>
+    <section fxLayout="column" fxLayoutAlign="center center" class="countdown" *ngIf="workTime">
+        <p class="title">WORK</p>
+        <p class="timer workTimer">{{workTime}}</p>
+        <p>seconds </p>
+    </section>
+
+    <section fxLayout="column" fxLayoutAlign="center center" class="countdown" *ngIf="restTime">
+        <p class="title">REST</p>
+        <p class="timer restTime">{{restTime}}</p>
+        <p>seconds</p>
+    </section>
+</section>

@@ -1,0 +1,22 @@
+:host-context(.timer-dialog-container) {
+
+  .mat-dialog-container {
+    background: lightcoral;
+  }
+}
+
+:host {
+  display: block;
+  height: 100%;
+
+  .workout-section {
+    min-height: 25rem;
+
+    .countdown-timer {
+      font-family: digital, Roboto, "Helvetica Neue", sans-serif;
+      font-size: 6rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+}

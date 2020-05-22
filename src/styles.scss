@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 62.5%;
+  background: #fafafa;
+}
+
+@font-face {
+  font-family: digital;
+  src: url(assets/fonts/digital-7.ttf) format("opentype");
+}
+
+.timer-dialog-container {
+  .mat-dialog-container {
+    background: linear-gradient(180deg, #95a1f0, white);
+  }
+}

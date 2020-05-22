@@ -1,0 +1,46 @@
+<audio preload="auto" #regularBeep>
+    <source src="assets/sounds/beep1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="timers">
+    <section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2rem">
+
+        <div class="dialog-content" fxLayout="column" fxLayoutAlign="center center" fxHide.gt-xs>
+            <div fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem" class="selector minutes-selector" (click)="onOpenInputDialog('minutes')">
+                <span>MINUTES</span>
+                <span>{{capTime.minutes}}</span>
+            </div>
+            <div fxLayout="row"
+                 fxLayoutAlign="center center"
+                 fxLayoutGap="2rem" class="selector seconds-selector" (click)="onOpenInputDialog('seconds')">
+                <span>SECONDS</span>
+                <span>{{capTime.seconds}}</span>
+            </div>
+        </div>
+
+        <div fxLayout="column" fxLayoutAlign="center center" fxHide.xs>
+            <div>
+                <mat-form-field>
+                    <label for="minutes">Minutes</label>
+                    <input matInput [(ngModel)]="capTime.minutes" name="minutes" id="minutes" type="number"
+                           min="0" max="59" autofocus>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field>
+                    <label for="seconds">Seconds</label>
+                    <input matInput [(ngModel)]="capTime.seconds" name="seconds" id="seconds" type="number" min="0"
+                           max="59">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <mat-card-actions>
+            <button class="button-mini-2--dark" mat-raised-button color="primary" (click)="onCountDown()">Go !
+            </button>
+        </mat-card-actions>
+    </section>
+</div>
