@@ -37,7 +37,7 @@ export class TimersService {
     }
 
     getPausableTimer(paused: BehaviorSubject<boolean>, capTime: number) {
-        return timer(100, 1000)
+        return timer(1000, 1000)
             .pipe(
                 withLatestFrom(paused),
                 filter(([value, paused]) => !paused),

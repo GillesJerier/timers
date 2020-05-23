@@ -11,8 +11,8 @@ import {MatDialog} from "@angular/material/dialog";
 export class IntervalTrainingComponent implements OnInit {
     intervalTimer = {
         rounds: 2,
-        work: 5,
-        rest: 2,
+        work: 10,
+        rest: 5,
     };
 
     constructor(private dialog: MatDialog, private timersService: TimersService) {
@@ -38,7 +38,6 @@ export class IntervalTrainingComponent implements OnInit {
     onOpenInputDialog(type: string) {
         const dialogRef = this.timersService.openInputDialog(type);
         dialogRef.afterClosed().subscribe((input: string) => {
-            console.log(type, input);
             this.intervalTimer[type] = input || 0;
         });
     }

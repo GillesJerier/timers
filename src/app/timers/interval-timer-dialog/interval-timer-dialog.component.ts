@@ -65,7 +65,13 @@ export class IntervalTimerDialogComponent implements OnInit, OnDestroy {
                 if (this.workTime <= 0) {
                     this.workSubs.unsubscribe();
                     this.timersService.playBeep(this.roundBeep);
-                    this.restTimer(roundCount);
+                    if (roundCount > 1) {
+                        this.restTimer(roundCount);
+                    } else {
+                        setTimeout(() => {
+                            this.timersService.playBeep(this.roundBeep);
+                        }, 300)
+                    }
                 }
             });
     }
