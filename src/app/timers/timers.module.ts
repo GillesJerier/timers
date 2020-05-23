@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {StopTrainingComponent} from "./stop-training/stop-training.component";
 import {IntervalTrainingComponent} from "./interval-training/interval-training.component";
 import {CountdownComponent} from "./countdown/countdown.component";
 import {TimerPipe} from "./pipes/timer.pipe";
@@ -20,7 +19,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
     declarations: [
-        StopTrainingComponent,
         IntervalTrainingComponent,
         CountdownComponent,
         TimerPipe,
@@ -47,7 +45,6 @@ import {FlexLayoutModule} from "@angular/flex-layout";
         IntervalTrainingComponent
     ],
     entryComponents: [
-        StopTrainingComponent,
         TimerDialogComponent,
         IntervalTimerDialogComponent
     ]

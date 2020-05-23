@@ -1,7 +1,7 @@
 <div class="timers">
     <section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2rem">
 
-        <div class="dialog-content" fxLayout="column" fxLayoutAlign="center center" fxHide.gt-xs>
+        <div class="dialog-content" fxLayout="column" fxLayoutAlign="center center">
             <div fxLayout="row"
                  fxLayoutAlign="center center"
                  fxLayoutGap="2rem" class="selector round-selector" (click)="onOpenInputDialog('rounds')">
@@ -19,27 +19,6 @@
                  fxLayoutGap="2rem" class="selector rest-selector" (click)="onOpenInputDialog('rest')">
                 <span>REST</span>
                 <span>{{intervalTimer.rest}}</span>
-            </div>
-        </div>
-
-        <div fxHide.xs>
-            <div>
-                <mat-form-field>
-                    <label for="round">Round</label>
-                    <input matInput [(ngModel)]="intervalTimer.rounds" name="round" id="round">
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <label for="work">Work</label>
-                    <input matInput [(ngModel)]="intervalTimer.work" name="work" id="work">
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <label for="rest">Rest</label>
-                    <input matInput [(ngModel)]="intervalTimer.rest" name="rest" id="rest">
-                </mat-form-field>
             </div>
         </div>
 

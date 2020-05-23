@@ -42,13 +42,11 @@ export class TimerDialogComponent implements OnInit, OnDestroy {
     }
 
     startTimer() {
-
         this.countdown.minutes = parseInt(this.data.capTime.minutes, 10);
         this.countdown.seconds = parseInt(this.data.capTime.seconds, 10);
         this.data.capTime.total = parseInt(this.data.capTime.minutes, 10) * 60 + parseInt(this.data.capTime.seconds);
 
         if (this.data.capTime) {
-
             this.timerSubs = this.timersService
                 .getPausableTimer(this.pauseCountDown, this.data.capTime.total)
                 .subscribe(() => {

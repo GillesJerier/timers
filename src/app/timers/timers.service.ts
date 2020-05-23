@@ -11,7 +11,7 @@ export class TimersService {
     readonly _timersType = [
         {type: 'COUNTDOWN', label: 'Countdown'},
         {type: 'INTERVAL', label: 'Interval Training'},
-        {type: 'EMOM', label: 'EMOM'}
+        {type: 'EMOM', label: 'Every Minute On the Minute (EMOM)'}
     ];
     readonly _inputType = {
         hours: 'HOURS',

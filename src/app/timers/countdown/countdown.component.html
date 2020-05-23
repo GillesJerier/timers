@@ -6,7 +6,7 @@
 <div class="timers">
     <section fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="2rem">
 
-        <div class="dialog-content" fxLayout="column" fxLayoutAlign="center center" fxHide.gt-xs>
+        <div class="dialog-content" fxLayout="column" fxLayoutAlign="center center">
             <div fxLayout="row"
                  fxLayoutAlign="center center"
                  fxLayoutGap="2rem" class="selector minutes-selector" (click)="onOpenInputDialog('minutes')">
@@ -18,23 +18,6 @@
                  fxLayoutGap="2rem" class="selector seconds-selector" (click)="onOpenInputDialog('seconds')">
                 <span>SECONDS</span>
                 <span>{{capTime.seconds}}</span>
-            </div>
-        </div>
-
-        <div fxLayout="column" fxLayoutAlign="center center" fxHide.xs>
-            <div>
-                <mat-form-field>
-                    <label for="minutes">Minutes</label>
-                    <input matInput [(ngModel)]="capTime.minutes" name="minutes" id="minutes" type="number"
-                           min="0" max="59" autofocus>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field>
-                    <label for="seconds">Seconds</label>
-                    <input matInput [(ngModel)]="capTime.seconds" name="seconds" id="seconds" type="number" min="0"
-                           max="59">
-                </mat-form-field>
             </div>
         </div>
 

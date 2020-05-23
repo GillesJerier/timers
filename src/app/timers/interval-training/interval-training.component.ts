@@ -38,7 +38,9 @@ export class IntervalTrainingComponent implements OnInit {
     onOpenInputDialog(type: string) {
         const dialogRef = this.timersService.openInputDialog(type);
         dialogRef.afterClosed().subscribe((input: string) => {
-            this.intervalTimer[type] = input || 0;
+            if (input) {
+                this.intervalTimer[type] = input;
+            }
         });
     }
 }
